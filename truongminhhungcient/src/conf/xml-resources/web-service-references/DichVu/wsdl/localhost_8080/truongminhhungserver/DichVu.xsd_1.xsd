@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://DichVu/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://DichVu/">
+
+<xs:element name="dangNhap" type="tns:dangNhap" />
+
+<xs:element name="dangNhapResponse" type="tns:dangNhapResponse" />
+
+<xs:element name="getNV" type="tns:getNV" />
+
+<xs:element name="getNVByML" type="tns:getNVByML" />
+
+<xs:element name="getNVByMLResponse" type="tns:getNVByMLResponse" />
+
+<xs:element name="getNVResponse" type="tns:getNVResponse" />
+
+<xs:element name="getPB" type="tns:getPB" />
+
+<xs:element name="getPBResponse" type="tns:getPBResponse" />
+
+<xs:element name="hello" type="tns:hello" />
+
+<xs:element name="helloResponse" type="tns:helloResponse" />
+
+<xs:element name="thongKeTrungBinhLuong" type="tns:thongKeTrungBinhLuong" />
+
+<xs:element name="thongKeTrungBinhLuongResponse" type="tns:thongKeTrungBinhLuongResponse" />
+
+<xs:element name="timKiemNhanVien" type="tns:timKiemNhanVien" />
+
+<xs:element name="timKiemNhanVienResponse" type="tns:timKiemNhanVienResponse" />
+
+<xs:complexType name="dangNhap">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0" />
+<xs:element name="arg1" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dangNhapResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nhanVienBean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nhanVienBean">
+<xs:sequence>
+<xs:element name="diaChi" type="xs:string" minOccurs="0" />
+<xs:element name="hoTen" type="xs:string" minOccurs="0" />
+<xs:element name="luong" type="xs:double" minOccurs="0" />
+<xs:element name="maNhanVien" type="xs:string" minOccurs="0" />
+<xs:element name="maPhongBan" type="xs:string" minOccurs="0" />
+<xs:element name="matKhau" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="timKiemNhanVien">
+<xs:sequence>
+<xs:element name="key" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="timKiemNhanVienResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nhanVienBean" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNVByML">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNVByMLResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nhanVienBean" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPB">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getPBResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:phongBanBean" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="phongBanBean">
+<xs:sequence>
+<xs:element name="maPhongBan" type="xs:string" minOccurs="0" />
+<xs:element name="tenPhongBan" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="thongKeTrungBinhLuong">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="thongKeTrungBinhLuongResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:thongKeBean" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="thongKeBean">
+<xs:sequence>
+<xs:element name="maPhongBan" type="xs:string" minOccurs="0" />
+<xs:element name="tenPhongBan" type="xs:string" minOccurs="0" />
+<xs:element name="trungBinhLuong" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNV">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="getNVResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:nhanVienBean" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
